@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:MVVMFlyout.Helpers;assembly=MVVMFlyout"  
+             x:Class="MVVMFlyout.Controls.NavigationHeader">
+  <ContentView.Content>
+
+        <Grid x:Name="Header" BackgroundColor="{StaticResource DarkBlueButton}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.25*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <Image Source="{helpers:EmbeddedImage MVVMFlyout.Resources.Images.caminilogo.png}" />
+            
+            <Label Text="cloud academy" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Start" 
+                               TextColor="{StaticResource DarkBlueButtonText}" FontSize="32"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

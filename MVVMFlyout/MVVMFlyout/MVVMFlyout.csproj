@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Images\caminilogo.png" />
+    <None Remove="Resources\Images\genericuser_dark.png" />
+    <None Remove="Resources\Images\genericuser_light.png" />
+    <None Remove="Resources\Images\lightbulb_dark.png" />
+    <None Remove="Resources\Images\lightbulb_light.png" />
+    <None Remove="Resources\Images\userclient.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\caminilogo.png" />
+    <EmbeddedResource Include="Resources\Images\genericuser_dark.png" />
+    <EmbeddedResource Include="Resources\Images\genericuser_light.png" />
+    <EmbeddedResource Include="Resources\Images\lightbulb_dark.png" />
+    <EmbeddedResource Include="Resources\Images\lightbulb_light.png" />
+    <EmbeddedResource Include="Resources\Images\userclient.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="6.0.3" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\StudentPage.xaml.cs">
+      <DependentUpon>StudentPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Controls\NavigationHeader.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ResourceDictionary.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
